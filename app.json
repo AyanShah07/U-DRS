@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "U-DRS Mobile",
+    "slug": "u-drs-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2196F3"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.udrs.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to the camera to take photos of damage for analysis.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to select images for damage analysis."
+      }
+    },
+    "android": {
+      "package": "com.udrs.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2196F3"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow U-DRS to access your camera to take photos of damage.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow U-DRS to access your photos to select images for analysis."
+        }
+      ]
+    ]
+  }
+}
